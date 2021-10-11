@@ -1,6 +1,6 @@
 # Distribution platform of papers and everyone's notes 
 
-(C) Created by SCAU DataHub GNN Group.
+&copy; Created by SCAU DataHub GNN Group.
 
 ## Policy
 
