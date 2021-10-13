@@ -35,6 +35,12 @@ It's not proper to read the paper concisely at the first time, you should have a
 - [Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting](https://papers.nips.cc/paper/2020/file/cdf6581cb7aca4b7e19ef136c6e601a5-Paper.pdf), *NeurIPS 2020*.
 - [FC-GAGA: Fully Connected Gated Graph Architecture for Spatio-Temporal Traffic Forecasting](https://ojs.aaai.org/index.php/AAAI/article/view/17114/16921), *AAAI 2021*.
 
+### 2021/10/13:
+- [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting](https://arxiv.org/pdf/1707.01926), *ICLR 2018*.
+- [Graph Wavelet Neural Network](https://arxiv.org/pdf/1904.07785.pdf), *ICLR 2019*.
+
+
+
 
 
 
