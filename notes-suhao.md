@@ -6,7 +6,8 @@
 ## Notes:
 - [x] [Traffic Flow Forecasting with Spatial-Temporal Graph Diffusion Network](https://www.aaai.org/AAAI21Papers/AISI-9334.ZhangX.pdf), *AAAI 21*. 
 
-**Tasks** Traffic Flow Forecasting.
+**Tasks** 
+- Traffic Flow Forecasting.
 
 **Challenges**  
 - The graph spatial information includes not only the adjacency of local space, but also the global geographical background (cross regional dependency)
