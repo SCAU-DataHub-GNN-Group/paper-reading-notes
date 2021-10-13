@@ -25,7 +25,7 @@
 **Key Reference**
 - [Stepdeep: a novel spatial-temporal mobility event prediction framework based on deep neural network](https://dl.acm.org/doi/pdf/10.1145/3219819.3219931),*KDD 2018*
 - [Region Representation Learning via Mobility Flow](https://dl.acm.org/doi/pdf/10.1145/3132847.3133006),*CIKM’17*
-- [Mist: A multiview and multimodal spatial-temporal learning framework for citywide abnormal event forecasting](https://arxiv.org/pdf/2001.04346.pdf)*WWW 2019*
+- [Mist: A multiview and multi-modal spatial-temporal learning framework for citywide abnormal event forecasting](https://arxiv.org/pdf/2001.04346.pdf)*WWW 2019*
 - [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting](https://arxiv.org/pdf/1707.01926v3.pdf), *ICLR 2018*.
 - [Revisiting Spatial-Temporal Similarity: A Deep Learning Framework for Traffic Prediction](https://arxiv.org/pdf/1803.01254.pdf), *AAAI 2019*.
 - [Graph Attention Networks](https://arxiv.org/pdf/1710.10903v3.pdf), *ICLR 2018*.
