@@ -34,7 +34,7 @@
 - [Graph Attention Networks](https://arxiv.org/pdf/1710.10903v3.pdf), *ICLR 2018*.
 
 
-
+---
 - [x] [Spatial-Temporal Fusion Graph Neural Networks for Traffic Flow Forecasting](https://arxiv.org/abs/2012.09641), *AAAI 2021*.
 
 **Tasks**: Traffic prediction
