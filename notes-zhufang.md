@@ -70,7 +70,7 @@
 **Tasks**: Multi-variate timeseries forecasting
 
 **Challenges**
-- Need to consider both intra-series temporal correlations and inter-series correlation simultaneously.
+- Need to consider both intra-time series temporal correlations and inter-time series correlation simultaneously.
 
 **Drawbacks of existing methods**
 - Ignore the inter-series correlations
@@ -82,11 +82,15 @@
 - Merging the two operations and construct an residual StemGNN block.
 - Using a sequence of DFT operations to extract the intra-time series correlations.
 - Add the backcast block to make the representative power more enhanced.
-- Based on the backcast block, the author proposed an loss function which measure the forecast error and backcast error simultaneously.
+- Based on the backcast block, the author proposed a loss function which measures the forecast error and backcast error simultaneously.
   
 **Contributions**
 - Using self-attention mechanism to construct the adjacent matrix.
-- Using backcast prediction results.
+- Using backcast prediction results to enhance the representation.
+---
+- [x] [FC-GAGA: Fully Connected Gated Graph Architecture for Spatio-Temporal Traffic Forecasting](https://ojs.aaai.org/index.php/AAAI/article/view/17114/16921), *AAAI 2021*.
+
+**Tasks**: 
 
 
 
