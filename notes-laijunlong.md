@@ -11,7 +11,7 @@
 
 **Challenges**  
 
-Existing methods can not well take into account the complex situation in traffic flow prediction (such as commercial street and residential street, there are still many cases that can be considered) and it is difficult to capture local correlation and global correlation at the same time.
+Existing methods can not well take into account the complex situation in traffic flow prediction,i.e., heterogeneity (such as commercial street and residential street, there are still many cases that can be considered) and it is difficult to capture local correlation and global correlation at the same time.
 
 **Drawback of existed methods** 
 
