@@ -48,7 +48,7 @@
 - Ignore the temporal similarity between nodes then modeling the adjacency matrix.
 - Ineffective to capture dependencies between local and global correlations.
 
-**Contributions**
+**Solutions**
 
 - Using fast-DTW algorithm to computer the similarity between two sequences of time-series data w.r.t two different nodes, and construct the temporal matrix $A_{TG}$.
 - Aggregate $A_{TG}, A_{TC}, A_{SG}$ to construct the $A_{STFG}$ matrix.
@@ -56,8 +56,39 @@
 
 - Add the output of STFGN module with Gated CNN module to capture the long-range spatial-temporal dependencies.
 
+**Contributions**
+- Applying the DTW algorithm to compute the similarity of different time series so that it can extract the global information. :)
+
 **Key Reference**
 
 - [Spatial-temporal synchronous graph convolutional networks: A new framework for spatial-temporal network data forecasting](https://ojs.aaai.org/index.php/AAAI/article/view/5438), *AAAI 2020*.
 - [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](https://www.ijcai.org/proceedings/2018/0505), *IJCAI 2018*.
+
+---
+- [x] [Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting](https://papers.nips.cc/paper/2020/file/cdf6581cb7aca4b7e19ef136c6e601a5-Paper.pdf), *NeurIPS 2020*.
+
+**Tasks**: Multi-variate timeseries forecasting
+
+**Challenges**
+- Need to consider both intra-series temporal correlations and inter-series correlation simultaneously.
+
+**Drawbacks of existing methods**
+- Ignore the inter-series correlations
+- Require a dependency as priors.
+
+**Solutions**
+- If the prior matrix is missed, we can construct this matrix by using self-attentnion on the timeseries.
+- Using GFT to extract the inter-time series correlations.
+- Merging the two operations and construct an residual StemGNN block.
+- Using a sequence of DFT operations to extract the intra-time series correlations.
+- Add the backcast block to make the representative power more enhanced.
+- Based on the backcast block, the author proposed an loss function which measure the forecast error and backcast error simultaneously.
+  
+**Contributions**
+- Using self-attention mechanism to construct the adjacent matrix.
+- Using backcast prediction results.
+
+
+
+
 

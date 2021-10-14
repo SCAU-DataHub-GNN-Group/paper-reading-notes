@@ -39,6 +39,12 @@ It's not proper to read the paper concisely at the first time, you should have a
 - [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting](https://arxiv.org/pdf/1707.01926), *ICLR 2018*.
 - [Graph Wavelet Neural Network](https://arxiv.org/pdf/1904.07785.pdf), *ICLR 2019*.
 
+### 2021/10/14:
+- [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](https://www.ijcai.org/proceedings/2018/0505.pdf), *IJCAI 2018*.
+- [Neural Ordinary Differential Equations](https://arxiv.org/pdf/1806.07366.pdf), *NIPS 2018*.
+
+
+
 
 
 
