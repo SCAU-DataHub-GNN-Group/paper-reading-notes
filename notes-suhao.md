@@ -83,7 +83,7 @@
 - The model proposed by the author has computational advantages. Compared with the model with similar accuracy, the training time is reduced by at least three times.
 
 **Solution** 
-- Solution of modelling time related features: using a multiplicative gate model that divides/multiplies the input/output of the FCGAGA layer by time effects derived from the time feature and via a fully connected network.
+- Solution of modelling time related features: using a multiplicative gate model that divides/multiplies the input/output of the FC-GAGA layer by time effects derived from the time feature and via a fully connected network.
 Then,the input time feature vector is concatenated with the node embedding to account for the fact that each node may have a different seasonality pattern.Finally, the input and output time effects are allowed to be decoupled through a separate linear projection layer.
 - Solution of nodes correlation: using a graph gate block which based on hard gating to capture the correlation of nodes in each layer by learning the weight matrix.
 - Solution of limitation of Markov model based on node proximity:Using FC-GAGA stacking, each layer of the model can freely set gates for cross node information flow according to the processing completed by the previous layer. Finally, the final output of the model is equal to the average value of layer prediction.
