@@ -28,3 +28,5 @@ Existing methods can not well take into account the complex situation in traffic
 **Key Reference**
 
 - [Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting](https://ojs.aaai.org//index.php/AAAI/article/view/5438), *AAAI 20*. 
+# Revelation
+The same data can mine useful information from different angles, and different information can promote each other.
