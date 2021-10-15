@@ -90,7 +90,27 @@
 ---
 - [x] [FC-GAGA: Fully Connected Gated Graph Architecture for Spatio-Temporal Traffic Forecasting](https://ojs.aaai.org/index.php/AAAI/article/view/17114/16921), *AAAI 2021*.
 
-**Tasks**: 
+**Tasks**: Multi-variate timeseries forecasting
+
+**Challenges**
+- The complexity and runtime of existed models are very higher.
+- Some models rely on the definition of relationships between variables provided by a domain expert.
+- Existing models tend to rely on Markovian assumptions to make modelling the interactions across varables.
+
+**Solutions**
+- Compute graph edge weights and use them in any place where node's mutual information is needed.
+- Use time gate to remove the seasonality from the input of the block and applying it again at the output of the block.
+- Use the graph gate to computer the relation between the node i and the every kth timestep's value of node j, then fomulates an N by Nw matrix. Note that the weight value W(i, j) affects the probability of opening the gate. The complexity is O(n^2), which is more effective than existed models with O(n^3) complexity.
+- Using an full connected time-series block for prediction.
+
+**Contributions**
+- Only use the full connected netword and residual operation to get a good performance.
+- The FC-GAGA can stacked and the performance can be imporved by stacked proper layers.
+- The complexity of the model is much lower than existing models.
+
+**Key Reference**
+- [Gated Graph Sequence Neural Networks](https://arxiv.org/pdf/1511.05493v4.pdf), *ICLR 2016*
+- [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](https://arxiv.org/pdf/1905.10437v4.pdf), *ICLR 2020*.
 
 
 
