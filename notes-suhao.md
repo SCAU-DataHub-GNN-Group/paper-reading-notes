@@ -48,7 +48,7 @@
 - Lack of an informative graph construction.
 - The modeling of adjacency matrix ignores the time correlation of nodes
 - Overfitting of spatial-temporal dependencies learning.
-.
+
 **Proposed model** 
 - Based on dynamic time warping, the author proposes an s'j algorithm including time fusion graph module and gated expansion convolution.
 
@@ -59,4 +59,35 @@
 **Key Reference**
 - [Using dynamic time warping to find patterns in time series](https://www.aaai.org/Papers/Workshops/1994/WS-94-03/WS94-03-031.pdf),*KDD 1994*
 - [Deep residual learning for image recognition](https://arxiv.org/pdf/1512.03385.pdf),*IEEE 2016*
+- [Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting](https://ojs.aaai.org/index.php/AAAI/article/view/5438/5294)*AAAI 2020*
+
+- [x] [FC-GAGA: Fully Connected Gated Graph Architecture for Spatio-Temporal Traffic Forecasting](https://arxiv.org/pdf/2007.15531.pdf), *AAAI 2021*.
+
+**Tasks** 
+- Traffic Flow Forecasting.
+
+**Challenges**  
+- If the graph structure time series is not modeled, it is difficult for the model to mine and predict the correlation between entities.
+
+**Drawback of existed methods** 
+- The complexity and runtime of existed models are significantly higher.
+- Some models rely on the definition of the relationship between variables provided by domain experts
+- Existing models often rely on Markov assumptions.
+
+**Proposed model** 
+- FC-GAGA, that is based on a combination of a fully-connected times series model N-BEATS and a hard graph gate mechanism.
+
+**Contributions**
+- The author combines the most advanced univariate TS prediction model N-BEATS with learnable time gate and learnable hard graph gate mechanism.
+- The model can effectively learn graph parameters from data and achieve good prediction performance. 
+- The model proposed by the author has computational advantages. Compared with the model with similar accuracy, the training time is reduced by at least three times.
+
+**Solution** 
+- Solution of modelling time related features: using a multiplicative gate model that divides/multiplies the input/output of the FCGAGA layer by time effects derived from the time feature and via a fully connected network.
+Then,the input time feature vector is concatenated with the node embedding to account for the fact that each node may have a different seasonality pattern.Finally, the input and output time effects are allowed to be decoupled through a separate linear projection layer.
+- Solution of nodes correlation: using a graph gate block which based on hard gating to capture the correlation of nodes in each layer by learning the weight matrix.
+- Solution of limitation of Markov model based on node proximity:Using FC-GAGA stacking, each layer of the model can freely set gates for cross node information flow according to the processing completed by the previous layer. Finally, the final output of the model is equal to the average value of layer prediction.
+
+**Key Reference**
+- [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](https://arxiv.org/pdf/1905.10437v4.pdf),*ICLR 2020*
 - [Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting](https://ojs.aaai.org/index.php/AAAI/article/view/5438/5294)*AAAI 2020*
