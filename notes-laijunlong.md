@@ -30,3 +30,27 @@ Existing methods can not well take into account the complex situation in traffic
 - [Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting](https://ojs.aaai.org//index.php/AAAI/article/view/5438), *AAAI 20*. 
 # Revelation
 The same data can mine useful information from different angles, and different information can promote each other.
+---
+NEXT ONE
+---
+---
+## Notes:
+
+- [x] [Traffic Flow Forecasting with Spatial-Temporal Graph Diffusion Network](https://www.aaai.org/AAAI21Papers/AISI-9334.ZhangX.pdf), *AAAI 21*
+
+**Tasks** 
++ Traffic prediction.
+
+**Challenges**  
+
++ Temporal dimension: Dependencies between different resolutions.
++ Spatial dimension: Dependence of similar areas.
+
+**Drawback of existed methods** 
+
++ Most methods only focus on the adjacent spatial correlation between adjacent regions, but ignore the global geographic context information.
++ The existing methods cannot encode the complex traffic change laws with time dependence and multi-resolution.
+
+**Solution** 
+1. Time dimension:Feature coding is carried out at different time granularity to obtain the traffic trend in different periods, such as hourly, daily and weekly traffic fluctuation rules. For the traffic sequence modeling under each time granularity, the information fusion module based on self-attention mechanism is used to learn the relationship between traffic data in different time intervals in history.
+2. Spatial dimensions:By embedding based on Attention learning in the constructed region graph, the learned region representation vector is potentially integrated with the traffic information of other related regions.
