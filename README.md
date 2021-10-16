@@ -43,6 +43,10 @@ It's not proper to read the paper concisely at the first time, you should have a
 - [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](https://www.ijcai.org/proceedings/2018/0505.pdf), *IJCAI 2018*.
 - [Neural Ordinary Differential Equations](https://arxiv.org/pdf/1806.07366.pdf), *NIPS 2018*.
 
+### 2021/10/15:
+- [GMAN: A Graph Multi-Attention Network for Traffic Prediction](https://arxiv.org/pdf/1911.08415.pdf), *AAAI 2020*.
+- [Inductive Representation Learning on Large Graphs](https://arxiv.org/pdf/1706.02216.pdf), *NIPS 2017*.
+
 
 
 
