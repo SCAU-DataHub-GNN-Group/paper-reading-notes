@@ -91,3 +91,34 @@ Then,the input time feature vector is concatenated with the node embedding to ac
 **Key Reference**
 - [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](https://arxiv.org/pdf/1905.10437v4.pdf),*ICLR 2020*
 - [Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting](https://ojs.aaai.org/index.php/AAAI/article/view/5438/5294),*AAAI 2020*
+
+- [x] [Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting](https://papers.nips.cc/paper/2020/file/cdf6581cb7aca4b7e19ef136c6e601a5-Paper.pdf), *NeurIPS 2020*.
+
+**Tasks** 
+- Multivariate Time-series Forecasting.
+
+**Challenges**  
+- Multivariate time series prediction needs to consider both the time correlation within the series and the correlation between the series.
+
+**Drawback of existed methods** 
+- Only capture the temporal patterns in the time domain.
+- Need a predefined relationship topology between sequences.
+
+**Proposed model** 
+- The author proposes Spectral Temporal Graph Neural Network (StemGNN) which combines Graph Fourier Transform (GFT) to model inter-series
+correlations and Discrete Fourier Transform (DFT) to model temporal dependencies in an end-to-end framework.
+
+**Contributions**
+- StemGNN is the first work to represent both intra sequence and inter sequence correlations in the spectral domain.
+- The model supports data-driven construction of dependency graphs of different time series.
+
+**Solution** 
+- Solution of without predefined topology relationships:Input to the potential correlation layer which combines a GRU layer and self-attention mechanism and automatically infer the structure of the graph and its related weight matrix W from the data.
+- Solution of modelling structural and temporal dependencies inside multivariate time-series jointly in the spectral domain:
+Pass g = (x, w) into the StemGNN block.First, the graph Fourier transform (GFT) operator transforms graph G into a spectral matrix representation, in which the univariate time series of each node becomes linearly independent. 
+Then, the discrete Fourier transform (DFT) operator transforms each univariate time series component to the frequency domain. In the frequency domain, the representation is fed into 1D convolution and Glu sublayer to capture the characteristic mode, 
+and then converted back to the time domain by inverse DFT(IDFT). Finally,apply graph convolution to spectral matrix representation and inverse GFT(IGFT).
+
+**Key Reference**
+- [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](https://arxiv.org/pdf/1905.10437v4.pdf),*ICLR 2020*
+- [Time-series anomaly detection service at microsoft](https://arxiv.org/pdf/1906.03821.pdf)*KDD 2019*
