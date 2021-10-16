@@ -122,3 +122,34 @@ and then converted back to the time domain by inverse DFT(IDFT). Finally,apply g
 **Key Reference**
 - [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](https://arxiv.org/pdf/1905.10437v4.pdf),*ICLR 2020*
 - [Time-series anomaly detection service at microsoft](https://arxiv.org/pdf/1906.03821.pdf)*KDD 2019*
+
+- [x] [DIFFUSION CONVOLUTIONAL RECURRENT NEURAL NETWORK: DATA-DRIVEN TRAFFIC FORECASTING](https://arxiv.org/pdf/1707.01926), *ICLR 2018*.
+
+**Tasks** 
+- Traffic Flow Forecasting.
+
+**Challenges**  
+- The complex spatial dependence of road network.
+- The time dynamics of road condition change and nonlinearity.
+- The inherent difficulties of long-term prediction.
+
+**Drawback of existed methods** 
+- Simple time series models rely on the stationarity assumption.
+- Without considering the spatial structure.
+- Some models are only for undirected graphs.
+
+**Proposed model** 
+- The author proposes Diffusion Convolutional Recurrent Neural Network (DCRNN) that integrates diffusion convolution,the sequence to sequence architecture and the scheduled sampling technique.
+- This paper presents DCRNN, which uses diffusion convolution, sequence to sequence learning framework and predetermined sampling to capture space and time dependence.
+
+**Contributions**
+- In this paper, the spatial correlation of traffic is modeled as a diffusion process on a directed graph, and a diffusion convolution is proposed, which can be calculated effectively.
+- The model supports data-driven construction of dependency graphs of different time series.
+
+**Solution** 
+- Solution of spatial dependency modeling:In this paper, diffusion convolution is defined, in which the diffusion form is characterized by random walks on a graph. Finally, this Markov process converges to a stationary distribution.
+- Solution of time dynamic modeling:In this paper,GRU is used and the matrix multiplication in GRU is replaced by diffusion convolution. In the multi-step prediction, the sequence to sequence architecture is adopted, in which the encoder and decoder are recurrent neural network with DCGRU.
+
+**Key Reference**
+- [Diffusion-convolutional neural networks](https://arxiv.org/pdf/1511.02136.pdf),*NIP 2016*
+- [Convolutional sequence to sequence learning](https://arxiv.org/pdf/1705.03122.pdf),*ICML 2017*
