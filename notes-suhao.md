@@ -153,3 +153,32 @@ and then converted back to the time domain by inverse DFT(IDFT). Finally,apply g
 **Key Reference**
 - [Diffusion-convolutional neural networks](https://arxiv.org/pdf/1511.02136.pdf),*NIP 2016*
 - [Convolutional sequence to sequence learning](https://arxiv.org/pdf/1705.03122.pdf),*ICML 2017*
+
+- [x] [Graph Wavelet Neural Network](https://arxiv.org/pdf/1904.07785.pdf), *ICLR 2019*.
+
+**Tasks** 
+- Graph feature extraction.
+
+**Challenges**  
+- The non-Euclidean nature of graph is the main obstacle or challenge.
+
+**Drawback of existed methods** 
+- It is difficult to determine a suitable neighborhood by spatial method.
+- The modeling of spectral method must be based on the eigenvalue decomposition of graph Laplace matrix, which has high complexity.
+- The Fourier base vector in spectral method is dense, which can not be accelerated by sparse matrix in large-scale graph operation, which reduces the efficiency of the model.
+- The Fourier vector in the spectral method is not enough to highlight the localization feature.
+
+**Proposed model** 
+- This paper proposes a graph wavelet neural network (GWNN) based on graph wavelet transform.
+
+**Contributions**
+- The wavelet basis vector is used to replace the Fourier basis in the original spectral method, which is sparse, efficient and clear.
+- An innovative graph wavelet neural network (GWNN) is proposed and an efficient algorithm is designed to decouple feature extraction and graph convolution to improve operation efficiency.
+
+**Solution** 
+- Solution of limitations of Fourier basis of graph structure:using wavelet basis to replace Fourier basis in graph convolution.
+- Solution of lots of parameters of the model:The graph convolution based on wavelet basis is decoupled into feature transformation and graph convolution.
+
+**Key Reference**
+- [Spectral networks and locally connected networks on graphs](https://arxiv.org/pdf/1312.6203.pdf),*ICLR 2014*
+- [ Graph wavelets for multiscale community mining](http://perso.ens-lyon.fr/pierre.borgnat/Papiers/14_Tremblay_ieeeTSP_06870496.pdf),*IEEE  2014*
