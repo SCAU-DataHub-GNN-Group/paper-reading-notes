@@ -182,3 +182,30 @@ and then converted back to the time domain by inverse DFT(IDFT). Finally,apply g
 **Key Reference**
 - [Spectral networks and locally connected networks on graphs](https://arxiv.org/pdf/1312.6203.pdf),*ICLR 2014*
 - [ Graph wavelets for multiscale community mining](http://perso.ens-lyon.fr/pierre.borgnat/Papiers/14_Tremblay_ieeeTSP_06870496.pdf),*IEEE  2014*
+
+- [x] [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](https://www.ijcai.org/proceedings/2018/0505.pdf), *IJCAI 2018*.
+
+**Tasks** 
+- Traffic Forecasting.
+
+**Challenges**  
+- Strong nonlinearity and complexity of traffic flow.
+
+**Drawback of existed methods** 
+- It is difficult to extract spatial and temporal features from input.
+- Convolution operation limits the model to deal with conventional grid structures.
+- The learning of sequence by cyclic neural network will lead to the accumulation of error.
+
+**Proposed model** 
+- A spatiotemporal graph convolution network (STGCN) is proposed, in which a generalized graph is used to model the traffic network, and a full convolution structure is deployed on the time axis to prevent the cumulative effect.
+
+**Contributions**
+- Pure convolution is applied to extract spatiotemporal information from time series of graph structure at the same time.
+- The training speed is more than 10 times faster and requires fewer parameters.
+
+**Solution** 
+- Solution of extracting spatial features:using graph convolution formula after Chebyshev approximation and first-order approximation.Consider not only the state of neighbor nodes, but also their own state.
+- Solution of extracting temporal features:using gated convolution to capture time dependence and GLU operation which may alleviate the phenomenon of gradient disappearance and retain the nonlinear ability of the model.
+
+**Key Reference**
+- [Semi-supervised classification with graph convolutional networks](https://arxiv.org/pdf/1609.02907v2.pdf),*ICLR 2016*
