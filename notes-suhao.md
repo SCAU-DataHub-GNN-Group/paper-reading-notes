@@ -209,3 +209,29 @@ and then converted back to the time domain by inverse DFT(IDFT). Finally,apply g
 
 **Key Reference**
 - [Semi-supervised classification with graph convolutional networks](https://arxiv.org/pdf/1609.02907v2.pdf),*ICLR 2016*
+
+- [x] [Neural Ordinary Differential Equations](https://arxiv.org/pdf/1806.07366.pdf), *NIPS 2018*.
+
+**Tasks** 
+- Traffic Forecasting.
+
+**Challenges**  
+- Applying neural networks to irregularly-sampled data.
+
+**Drawback of existed methods** 
+- They assume that the sample is evenly sampled from the population, but this is often not the case in reality.
+- They assume that the interval between these observations and potential variables is fixed, which often leads to the deviation of the estimated distribution from the overall distribution.
+
+**Proposed model** 
+- The author uses Neural ODE which can model the time series as a continuously changing trajectory.
+
+**Contributions**
+- The author takes the derivative of the hidden state as a parameter without consuming a lot of space to store the intermediate results.
+- By explicitly changing the accuracy of numerical integration, the speed and accuracy of the model can be adjusted freely.
+
+**Solution** 
+- Solution of Irregular sampling and random latent variables:The author uses latent ODE model to model time series, in which potential trajectories are used to represent each time series. Each trajectory is determined by the local initial state and a set of global potential dynamics shared in all time series.
+
+
+**Key Reference**
+- [Auto-encoding variational Bayes](https://arxiv.org/pdf/1312.6114.pdf),*ICLR 2014*
