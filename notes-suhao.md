@@ -213,7 +213,7 @@ and then converted back to the time domain by inverse DFT(IDFT). Finally,apply g
 - [x] [Neural Ordinary Differential Equations](https://arxiv.org/pdf/1806.07366.pdf), *NIPS 2018*.
 
 **Tasks** 
-- Traffic Forecasting.
+- A new family of deep neural network models.
 
 **Challenges**  
 - Applying neural networks to irregularly-sampled data.
