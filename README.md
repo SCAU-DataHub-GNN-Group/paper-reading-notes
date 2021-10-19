@@ -47,7 +47,13 @@ It's not proper to read the paper concisely at the first time, you should have a
 - [GMAN: A Graph Multi-Attention Network for Traffic Prediction](https://arxiv.org/pdf/1911.08415.pdf), *AAAI 2020*.
 - [Inductive Representation Learning on Large Graphs](https://arxiv.org/pdf/1706.02216.pdf), *NIPS 2017*.
 
-
+### 2021/10/18:
+- [Graph Structure Estimation Neural Networks](http://www.shichuan.org/doc/103.pdf), *WWW 2021*.
+- [Z-GCNETs: Time Zigzags at Graph Convolutional Networks for Time Series Forecasting](http://proceedings.mlr.press/v139/chen21o/chen21o.pdf), *ICML 2021*.
+  
+### 2021/10/19:
+- [GRAND: Graph Neural Diffusion](http://proceedings.mlr.press/v139/chamberlain21a/chamberlain21a.pdf), *ICML 2021*.
+- [Spatiotemporal Representation Learning on Time Series with Dynamic Graph ODEs](https://openreview.net/pdf?id=Jh9VxCkrEZn), submitted to *ICLR 2022*.
 
 
 
