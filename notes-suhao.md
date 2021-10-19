@@ -265,3 +265,31 @@ and then converted back to the time domain by inverse DFT(IDFT). Finally,apply g
  
 **Key Reference**
 - [Node2vec: scalable feature learning for networks](https://www.kdd.org/kdd2016/papers/files/rfp0218-groverA.pdf),*KDD 2016*
+
+- [x] [Inductive Representation Learning on Large Graphs](https://arxiv.org/pdf/1706.02216.pdf), *NIPS 2017*.
+
+**Tasks** 
+- Inductive Representation.
+
+**Challenges**  
+- Generate embedding for unseen nodes.
+
+**Drawback of existed methods** 
+- Focuse on embedding nodes from a single fixed graph.
+- All nodes need to participate in training.
+- Always learn a fixed representation of each node.
+
+**Proposed model** 
+- The author proposes a general framework, called GraphSAGE,which leverage node features and learn an embedding function that generalizes to unseen nodes.
+
+**Contributions**
+- A set of aggregation functions are defined and applied to the network framework.
+- An unsupervised loss function is designed so that graphsage can train without task supervision.
+
+**Solution** 
+- Solution of unseen nodes embedding:Each aggregation function aggregates information from different hops or different search depths of a vertex. Generate embedding for completely unseen vertices through the learned aggregation function.
+- Solution of input node selection:Let the node neighbors of each layer in graphsage sample from the upper layer network, not all neighbors participate, and the size of the sampled neighbors is fixed.
+- Solution of non-fixed representation of each node:The aggregator function is used to learn to aggregate feature information from the local neighborhood of the node. Each aggregator function aggregates information from a different number of hops or search depth from a given node.
+
+**Key Reference**
+- [Weisfeiler-Lehman Graph Kernels](https://dl.acm.org/doi/pdf/10.5555/1953048.2078187),*JMLR 2011*
