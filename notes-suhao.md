@@ -235,3 +235,33 @@ and then converted back to the time domain by inverse DFT(IDFT). Finally,apply g
 
 **Key Reference**
 - [Auto-encoding variational Bayes](https://arxiv.org/pdf/1312.6114.pdf),*ICLR 2014*
+
+- [x] [GMAN: A Graph Multi-Attention Network for Traffic Prediction](https://arxiv.org/pdf/1911.08415.pdf), * AAAI 2020*.
+
+**Tasks** 
+- Traffic Prediction.
+
+**Challenges**  
+- The complexity of traffic systems and the constantly changing nature of many impacting factors.
+
+**Drawback of existed methods** 
+- Dynamic spatial correlation and nonlinear temporal correlation can not be well captured.
+- In long-term forecasting, small errors in each time step may be amplified.
+
+**Proposed model** 
+- The author proposes a graph multi-attention network (GMAN).It adapts an encoder-decoder architecture, where both the encoder and the decoder consist of multiple spatio-temporal attention blocks to model the impact of the spatio-temporal factors on traffic conditions.
+
+**Contributions**
+- Spatial and temporal attention mechanisms are proposed to simulate the dynamic spatial and nonlinear temporal correlation.
+- A gating fusion algorithm is designed to adaptively fuse the information extracted by spatial and temporal attention mechanisms.
+- Propose a transformational attention mechanism to transform historical traffic characteristics into future manifestations.
+
+**Solution** 
+- Solution of  the evolution of traffic conditions restricted by theunderlying road network:using the node2vec method to learn the vertex representation and sending these vectors into a two-layer fully connected neural network.
+- Solution of representing the dynamic correlation between nodes:apply a two-layer fully-connected neural network to transform the time feature to a vector.
+- Solution of capture the correlation in high dynamics of roads:A spatial attention mechanism is designed to adaptively capture the correlation between sensors in road network. The key idea is to dynamically assign different weights to different vertices in different time steps.
+- Solution of nonlinear time correlation:The hidden state is connected with spatiotemporal embedding, and the multi-head method is used to calculate the attention score.
+- Solution of alleviate the error propagation effect between different prediction time steps for a long time:The transformation attention layer is added to model the direct relationship between each future time step and each historical time step, so as to transform the encoded traffic characteristics and generate the future representation as the input of the decoder.
+ 
+**Key Reference**
+- [Node2vec: scalable feature learning for networks](https://www.kdd.org/kdd2016/papers/files/rfp0218-groverA.pdf),*KDD 2016*
