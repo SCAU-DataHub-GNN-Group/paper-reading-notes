@@ -122,3 +122,174 @@ and then converted back to the time domain by inverse DFT(IDFT). Finally,apply g
 **Key Reference**
 - [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](https://arxiv.org/pdf/1905.10437v4.pdf),*ICLR 2020*
 - [Time-series anomaly detection service at microsoft](https://arxiv.org/pdf/1906.03821.pdf)*KDD 2019*
+
+- [x] [DIFFUSION CONVOLUTIONAL RECURRENT NEURAL NETWORK: DATA-DRIVEN TRAFFIC FORECASTING](https://arxiv.org/pdf/1707.01926), *ICLR 2018*.
+
+**Tasks** 
+- Traffic Flow Forecasting.
+
+**Challenges**  
+- The complex spatial dependence of road network.
+- The time dynamics of road condition change and nonlinearity.
+- The inherent difficulties of long-term prediction.
+
+**Drawback of existed methods** 
+- Simple time series models rely on the stationarity assumption.
+- Without considering the spatial structure.
+- Some models are only for undirected graphs.
+
+**Proposed model** 
+- The author proposes Diffusion Convolutional Recurrent Neural Network (DCRNN) that integrates diffusion convolution,the sequence to sequence architecture and the scheduled sampling technique.
+- This paper presents DCRNN, which uses diffusion convolution, sequence to sequence learning framework and predetermined sampling to capture space and time dependence.
+
+**Contributions**
+- In this paper, the spatial correlation of traffic is modeled as a diffusion process on a directed graph, and a diffusion convolution is proposed, which can be calculated effectively.
+- The model supports data-driven construction of dependency graphs of different time series.
+
+**Solution** 
+- Solution of spatial dependency modeling:In this paper, diffusion convolution is defined, in which the diffusion form is characterized by random walks on a graph. Finally, this Markov process converges to a stationary distribution.
+- Solution of time dynamic modeling:In this paper,GRU is used and the matrix multiplication in GRU is replaced by diffusion convolution. In the multi-step prediction, the sequence to sequence architecture is adopted, in which the encoder and decoder are recurrent neural network with DCGRU.
+
+**Key Reference**
+- [Diffusion-convolutional neural networks](https://arxiv.org/pdf/1511.02136.pdf),*NIP 2016*
+- [Convolutional sequence to sequence learning](https://arxiv.org/pdf/1705.03122.pdf),*ICML 2017*
+
+- [x] [Graph Wavelet Neural Network](https://arxiv.org/pdf/1904.07785.pdf), *ICLR 2019*.
+
+**Tasks** 
+- Graph feature extraction.
+
+**Challenges**  
+- The non-Euclidean nature of graph is the main obstacle or challenge.
+
+**Drawback of existed methods** 
+- It is difficult to determine a suitable neighborhood by spatial method.
+- The modeling of spectral method must be based on the eigenvalue decomposition of graph Laplace matrix, which has high complexity.
+- The Fourier base vector in spectral method is dense, which can not be accelerated by sparse matrix in large-scale graph operation, which reduces the efficiency of the model.
+- The Fourier vector in the spectral method is not enough to highlight the localization feature.
+
+**Proposed model** 
+- This paper proposes a graph wavelet neural network (GWNN) based on graph wavelet transform.
+
+**Contributions**
+- The wavelet basis vector is used to replace the Fourier basis in the original spectral method, which is sparse, efficient and clear.
+- An innovative graph wavelet neural network (GWNN) is proposed and an efficient algorithm is designed to decouple feature extraction and graph convolution to improve operation efficiency.
+
+**Solution** 
+- Solution of limitations of Fourier basis of graph structure:using wavelet basis to replace Fourier basis in graph convolution.
+- Solution of lots of parameters of the model:The graph convolution based on wavelet basis is decoupled into feature transformation and graph convolution.
+
+**Key Reference**
+- [Spectral networks and locally connected networks on graphs](https://arxiv.org/pdf/1312.6203.pdf),*ICLR 2014*
+- [ Graph wavelets for multiscale community mining](http://perso.ens-lyon.fr/pierre.borgnat/Papiers/14_Tremblay_ieeeTSP_06870496.pdf),*IEEE  2014*
+
+- [x] [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](https://www.ijcai.org/proceedings/2018/0505.pdf), *IJCAI 2018*.
+
+**Tasks** 
+- Traffic Forecasting.
+
+**Challenges**  
+- Strong nonlinearity and complexity of traffic flow.
+
+**Drawback of existed methods** 
+- It is difficult to extract spatial and temporal features from input.
+- Convolution operation limits the model to deal with conventional grid structures.
+- The learning of sequence by cyclic neural network will lead to the accumulation of error.
+
+**Proposed model** 
+- A spatiotemporal graph convolution network (STGCN) is proposed, in which a generalized graph is used to model the traffic network, and a full convolution structure is deployed on the time axis to prevent the cumulative effect.
+
+**Contributions**
+- Pure convolution is applied to extract spatiotemporal information from time series of graph structure at the same time.
+- The training speed is more than 10 times faster and requires fewer parameters.
+
+**Solution** 
+- Solution of extracting spatial features:using graph convolution formula after Chebyshev approximation and first-order approximation.Consider not only the state of neighbor nodes, but also their own state.
+- Solution of extracting temporal features:using gated convolution to capture time dependence and GLU operation which may alleviate the phenomenon of gradient disappearance and retain the nonlinear ability of the model.
+
+**Key Reference**
+- [Semi-supervised classification with graph convolutional networks](https://arxiv.org/pdf/1609.02907v2.pdf),*ICLR 2016*
+
+- [x] [Neural Ordinary Differential Equations](https://arxiv.org/pdf/1806.07366.pdf), *NIPS 2018*.
+
+**Tasks** 
+- A new family of deep neural network models.
+
+**Challenges**  
+- Applying neural networks to irregularly-sampled data.
+
+**Drawback of existed methods** 
+- They assume that the sample is evenly sampled from the population, but this is often not the case in reality.
+- They assume that the interval between these observations and potential variables is fixed, which often leads to the deviation of the estimated distribution from the overall distribution.
+
+**Proposed model** 
+- The author uses Neural ODE which can model the time series as a continuously changing trajectory.
+
+**Contributions**
+- The author takes the derivative of the hidden state as a parameter without consuming a lot of space to store the intermediate results.
+- By explicitly changing the accuracy of numerical integration, the speed and accuracy of the model can be adjusted freely.
+
+**Solution** 
+- Solution of Irregular sampling and random latent variables:The author uses latent ODE model to model time series, in which potential trajectories are used to represent each time series. Each trajectory is determined by the local initial state and a set of global potential dynamics shared in all time series.
+
+
+**Key Reference**
+- [Auto-encoding variational Bayes](https://arxiv.org/pdf/1312.6114.pdf),*ICLR 2014*
+
+- [x] [GMAN: A Graph Multi-Attention Network for Traffic Prediction](https://arxiv.org/pdf/1911.08415.pdf), * AAAI 2020*.
+
+**Tasks** 
+- Traffic Prediction.
+
+**Challenges**  
+- The complexity of traffic systems and the constantly changing nature of many impacting factors.
+
+**Drawback of existed methods** 
+- Dynamic spatial correlation and nonlinear temporal correlation can not be well captured.
+- In long-term forecasting, small errors in each time step may be amplified.
+
+**Proposed model** 
+- The author proposes a graph multi-attention network (GMAN).It adapts an encoder-decoder architecture, where both the encoder and the decoder consist of multiple spatio-temporal attention blocks to model the impact of the spatio-temporal factors on traffic conditions.
+
+**Contributions**
+- Spatial and temporal attention mechanisms are proposed to simulate the dynamic spatial and nonlinear temporal correlation.
+- A gating fusion algorithm is designed to adaptively fuse the information extracted by spatial and temporal attention mechanisms.
+- Propose a transformational attention mechanism to transform historical traffic characteristics into future manifestations.
+
+**Solution** 
+- Solution of  the evolution of traffic conditions restricted by theunderlying road network:using the node2vec method to learn the vertex representation and sending these vectors into a two-layer fully connected neural network.
+- Solution of representing the dynamic correlation between nodes:apply a two-layer fully-connected neural network to transform the time feature to a vector.
+- Solution of capture the correlation in high dynamics of roads:A spatial attention mechanism is designed to adaptively capture the correlation between sensors in road network. The key idea is to dynamically assign different weights to different vertices in different time steps.
+- Solution of nonlinear time correlation:The hidden state is connected with spatiotemporal embedding, and the multi-head method is used to calculate the attention score.
+- Solution of alleviate the error propagation effect between different prediction time steps for a long time:The transformation attention layer is added to model the direct relationship between each future time step and each historical time step, so as to transform the encoded traffic characteristics and generate the future representation as the input of the decoder.
+ 
+**Key Reference**
+- [Node2vec: scalable feature learning for networks](https://www.kdd.org/kdd2016/papers/files/rfp0218-groverA.pdf),*KDD 2016*
+
+- [x] [Inductive Representation Learning on Large Graphs](https://arxiv.org/pdf/1706.02216.pdf), *NIPS 2017*.
+
+**Tasks** 
+- Inductive Representation.
+
+**Challenges**  
+- Generate embedding for unseen nodes.
+
+**Drawback of existed methods** 
+- Focuse on embedding nodes from a single fixed graph.
+- All nodes need to participate in training.
+- Always learn a fixed representation of each node.
+
+**Proposed model** 
+- The author proposes a general framework, called GraphSAGE,which leverage node features and learn an embedding function that generalizes to unseen nodes.
+
+**Contributions**
+- A set of aggregation functions are defined and applied to the network framework.
+- An unsupervised loss function is designed so that graphsage can train without task supervision.
+
+**Solution** 
+- Solution of unseen nodes embedding:Each aggregation function aggregates information from different hops or different search depths of a vertex. Generate embedding for completely unseen vertices through the learned aggregation function.
+- Solution of input node selection:Let the node neighbors of each layer in graphsage sample from the upper layer network, not all neighbors participate, and the size of the sampled neighbors is fixed.
+- Solution of non-fixed representation of each node:The aggregator function is used to learn to aggregate feature information from the local neighborhood of the node. Each aggregator function aggregates information from a different number of hops or search depth from a given node.
+
+**Key Reference**
+- [Weisfeiler-Lehman Graph Kernels](https://dl.acm.org/doi/pdf/10.5555/1953048.2078187),*JMLR 2011*

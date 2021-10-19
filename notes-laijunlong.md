@@ -29,10 +29,11 @@ Existing methods can not well take into account the complex situation in traffic
 
 - [Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting](https://ojs.aaai.org//index.php/AAAI/article/view/5438), *AAAI 20*. 
 # Revelation
-The same data can mine useful information from different angles, and different information can promote each other.
+ The same data can mine useful information from different angles, and different information can promote each other.
+
 ---
 NEXT ONE
----
+
 ---
 ## Notes:
 
@@ -54,3 +55,28 @@ NEXT ONE
 **Solution** 
 1. Time dimension:Feature coding is carried out at different time granularity to obtain the traffic trend in different periods, such as hourly, daily and weekly traffic fluctuation rules. For the traffic sequence modeling under each time granularity, the information fusion module based on self-attention mechanism is used to learn the relationship between traffic data in different time intervals in history.
 2. Spatial dimensions:By embedding based on Attention learning in the constructed region graph, the learned region representation vector is potentially integrated with the traffic information of other related regions.
+---
+NEXT ONE
+
+---
+## Notes:
+
+- [x] [Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting](https://papers.nips.cc/paper/2020/file/cdf6581cb7aca4b7e19ef136c6e601a5-Paper.pdf), *NeurIPS 2020*
+
+**Tasks** 
++ Traffic prediction.
+
+**Challenges**  
+
++ Multivariable time series prediction often requires simultaneous modeling of the time model within a single variable and the relationship between multiple variables.
++ Most existing models can only capture time patterns in the time domain and require a predefined adjacency matrix.
+
+**Drawback of existed methods** 
+
++ Most models only capture temporal correlations in the time domain and resort to pre-defined priors as inter-sequence relationships.
+
+**Solution** 
+1. Topology of data-driven learning graph.
+2. Feed the graph into the StemGNN Layer.
+3. The designed loss function is expressed as a combination of predicted loss and backtracking loss.
+4. Rolling strategy is used for multi-step prediction.
