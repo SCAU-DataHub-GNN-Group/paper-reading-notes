@@ -80,3 +80,33 @@ NEXT ONE
 2. Feed the graph into the StemGNN Layer.
 3. The designed loss function is expressed as a combination of predicted loss and backtracking loss.
 4. Rolling strategy is used for multi-step prediction.
+---
+NEXT ONE
+
+---
+## Notes:
+
+- [x] [FC-GAGA: Fully Connected Gated Graph Architecture for Spatio-Temporal Traffic Forecasting](https://arxiv.org/pdf/2007.15531.pdf), *AAAI 2021*
+
+**Tasks** 
++ Traffic prediction.
+
+**Challenges**  
+
++ Model complexity.
++ Graph topology learning mode
+
+**Drawback of existed methods** 
+
++ The complexity and uptime of existing models is high.
++ Some models rely on predefined relationships between variables.
++ Existing models tend to rely on markov assumptions
+
+**Solution** 
+1. Node embedding is used to better represent nodes.So get the Node embedding matrix E.
+2. The weight matrix is obtained by node embedding.So get the weight matrix W.
+3. Time Gate is integrated with Node embedding for Time modeling.
+4. The topology structure G of Graph is generated in Graph Gate module by using weight matrix and input matrix and hard gate mechanism.
+5. Then the matrix E, X and G are transposed side by side to obtain the matrix Z, which represents the matrix integrating spatio-temporal information. Just like the previous paper, after learning the time matrix and space matrix and adding a connection matrix, the fusion graph can be obtained according to a certain arrangement.
+6. The idea of ResNets is then used so that multiple blocks can be stacked and the results of each Block are added to wait for the predicted value of this layer.
+7. Stack multiple layers and average the prediction results of multiple layers to get the final prediction value.
