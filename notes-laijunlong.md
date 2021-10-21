@@ -94,13 +94,13 @@ NEXT ONE
 **Challenges**  
 
 + Model complexity.
-+ Graph topology learning.
++ Graph topology structure learning.
 
 **Drawback of existed methods** 
 
 + The complexity and uptime of existing models is high.
 + Some models rely on predefined relationships between variables.
-+ Existing models tend to rely on markov assumptions
++ Existing models tend to rely on markov assumptions.
 
 **Solution** 
 1. Node embedding is used to better represent nodes.So get the Node embedding matrix E.
