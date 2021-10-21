@@ -55,6 +55,22 @@ It's not proper to read the paper concisely at the first time, you should have a
 - [GRAND: Graph Neural Diffusion](http://proceedings.mlr.press/v139/chamberlain21a/chamberlain21a.pdf), *ICML 2021*.
 - [Spatiotemporal Representation Learning on Time Series with Dynamic Graph ODEs](https://openreview.net/pdf?id=Jh9VxCkrEZn), submitted to *ICLR 2022*.
 
+### 2021/10/20:
+- [From Fourier to Koopman: Spectral Methods for Long-term Time Series Prediction](https://www.jmlr.org/papers/volume22/20-406/20-406.pdf), *JMLR'19*.
+- [Informer: Beyond efficient transformer for long sequence time-series forecasting](https://www.aaai.org/AAAI21Papers/AAAI-7346.ZhouHaoyi.pdf), *AAAI'21*.
+
+### 2021/10/21
+- [Multivariate Probabilistic Time Series Forecasting via Conditioned Normalizing Flows](https://openreview.net/pdf?id=WiGQBFuVRv), *ICLR 21*.
+- [ST-Norm: Spatial and Temporal Normalization for Multi-variate Time Series Forecasting](https://dl.acm.org/doi/pdf/10.1145/3447548.3467330), *KDD 2021*.
+
+### 2021/10/22
+- [Neural Rough Differential Equations for Long Time Series](http://proceedings.mlr.press/v139/morrill21b/morrill21b.pdf), *ICML 2021*.
+- [ST-Norm: Spatial and Temporal Normalization for Multi-variate Time Series Forecasting](https://arxiv.org/pdf/2010.02803.pdf), *KDD 2021*.
+
+
+
+
+
 
 
 

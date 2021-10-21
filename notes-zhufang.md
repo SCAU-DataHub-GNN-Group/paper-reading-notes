@@ -112,6 +112,25 @@
 - [Gated Graph Sequence Neural Networks](https://arxiv.org/pdf/1511.05493v4.pdf), *ICLR 2016*
 - [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](https://arxiv.org/pdf/1905.10437v4.pdf), *ICLR 2020*.
 
+---
+- [x] [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting](https://arxiv.org/pdf/1707.01926), *ICLR 2018*.
+
+**Tasks**: Traffic forecasting.
+
+**Challenges**
+- Complex spatiotemporal dependencies and inherent diffculty in the long term forecasting.
+
+**Solutions**
+- Diffusion convolution(DC) captures the spatial dependency, which utilizes an approximation of the stationary distribution(Markov transmit distribution).
+- Combine the DC with traditional GRU module and construt the DCGRU module.
+- Use the DCGRU module to implement an seq2seq model for forecasting.
+
+**Contributions**
+- Much lower complexity than the traditional spectral-based graph convolution, O(K|E|) << O(N^2).
+- Giving a proof that the spectural graph convolution is specific condition of the diffution convolution.
+- Using ablation study to conclude that directed graph is better than undirected one in capturing the asymmetric correlation.
+
+
 
 
 
