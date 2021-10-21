@@ -94,7 +94,7 @@ NEXT ONE
 **Challenges**  
 
 + Model complexity.
-+ Graph topology learning mode
++ Graph topology learning.
 
 **Drawback of existed methods** 
 
